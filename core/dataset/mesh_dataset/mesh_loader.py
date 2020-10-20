@@ -33,7 +33,7 @@ class MeshLoader(object):
 
         instance_list_new = []
         for instance in self.instance_list:
-            fname = os.path.join(os.path.expanduser('~/data'), 'NormalizationParameters', 'ShapeNetV2', self.class_name, '{}.npz'.format(instance))
+            fname = os.path.join(data_dir, 'NormalizationParameters', 'ShapeNetV2', self.class_name, '{}.npz'.format(instance))
             if os.path.exists(fname):
                 instance_list_new.append(instance)
             else:
